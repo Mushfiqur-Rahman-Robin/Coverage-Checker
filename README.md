@@ -1,0 +1,2 @@
+# Coverage-Checker
+This application is based on a CatBoost machine learning model. This basically takes four queries from the user (Upazila/Thana name, Network availability (3G/4G), District, and Zip code) and outputs the best operator for that location. This model was trained on the data I collected from Opensingnal application. I collected 22,360 data for 559 locations of Bangladesh. Currently this model is based on a static dataset but in the future, I have a plan to upgrade it to a real-time data collection-based model.

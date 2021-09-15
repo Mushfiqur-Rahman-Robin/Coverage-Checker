@@ -1,33 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel = 'stylesheet' href = {{ url_for('static', filename = 'css/style.css') }}
-</head>
-<body>
-
-<h2>Drop correct details here to find out your desired operator.</h2>
-
-<form action="/prediction" method='post'>
-  <label for="Your Upazila/Thana Area (Add 'Sadar' for Sadar Upazila, example : Barishal Sadar): ">Location: Your Upazila/Thana Area (Add 'Sadar' for Sadar Upazila, example : Barishal Sadar)</label><br>
-  <input type="text" id="location" name="location" value=""><br>
-
-  <label for="Select Your Network Availability (4G or 3G/2G): ">Network Availability (4G or 3G/2G):</label><br>
-  <input type="text" id="network_available" name="network_available" value="3G/2G"><br><br>
-
-
-  <label for="Your District: ">District:</label><br>
-  <input type="text" id="district" name="district" value=""><br><br>
-
-  <label for="Your Upazila/Thana Zip Code: ">Zip Code:</label><br>
-  <input type="text" id="zip_code" name="zip_code" value=""><br><br>
-
-  <input type="submit" value="Submit">
-</form>
-
-<p>Click 'submit' to see the best operator of your area.</p>
+{% extends "index.html" %}
 
 {% block content %}
-{% endblock %}
+<h2>Best operator of your area: </h2>
 
-</body>
-</html>
+    {# Best operator in your area is: #}
+    {% for key, value in prediction.items() %}
+    <th><h2>{{ value }}</h2></th>
+    <th><br></th>
+
+    {% endfor %}
+
+{% endblock %}

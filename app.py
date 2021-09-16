@@ -21,7 +21,7 @@ def index():
 
 
 
-@app.route('/prediction', methods = ['POST'])
+@app.route('/prediction', methods = ['POST','GET'])
 def prediction():
   if request.method == 'POST':
     Location = str(request.form['location'])

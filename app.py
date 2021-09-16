@@ -10,7 +10,7 @@ model = pickle.load(open('/content/catboost_model.pkl', 'rb'))
 
 
 @app.route('/')
-def hello():
+def index():
     return render_template('index.html')
 
 

@@ -15,7 +15,7 @@ def hello():
 
 
 
-@app.route('/prediction', methods = ['POST', 'GET'])
+@app.route('/prediction', methods = ['POST'])
 def prediction():
   Location = str(request.form['location'])
   Network_Availability = str(request.form['network_available'])

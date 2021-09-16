@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,12 +7,12 @@
 
 <h2>Drop correct details here to find out your desired operator.</h2>
 
-<form action="/prediction" method='post'>
+<form action="{{ url_for('prediction') }}" method='post'>
   <label for="Your Upazila/Thana Area (Add 'Sadar' for Sadar Upazila, example : Barishal Sadar): ">Location: Your Upazila/Thana Area (Add 'Sadar' for Sadar Upazila, example : Barishal Sadar)</label><br>
   <input type="text" id="location" name="location" value=""><br>
 
   <label for="Select Your Network Availability (4G or 3G/2G): ">Network Availability (4G or 3G/2G):</label><br>
-  <input type="text" id="network_available" name="network_available" value="3G/2G"><br><br>
+  <input type="text" id="network_available" name="network_available" value=""><br><br>
 
 
   <label for="Your District: ">District:</label><br>

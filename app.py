@@ -1,8 +1,7 @@
 import pickle
 import math
 from flask import Flask, escape, request, url_for, redirect, render_template, request
-from flask_sqlalchemy import SQLAlchemy
-from flask_ngrok import run_with_ngrok
+
 
 
 #run_with_ngrok(app)

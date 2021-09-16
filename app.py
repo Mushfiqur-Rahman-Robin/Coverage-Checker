@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_ngrok import run_with_ngrok
 
 app = Flask(__name__)
-run_with_ngrok(app)
+#run_with_ngrok(app)
 model = pickle.load(open('/content/catboost_model.pkl', 'rb'))
 
 
@@ -80,4 +80,4 @@ def prediction():
 
 
 if __name__ == "__main__":
-  app.run()
+  app.run(debug=True)

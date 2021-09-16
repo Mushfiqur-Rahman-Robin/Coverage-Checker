@@ -24,10 +24,10 @@ def index():
 @app.route('/prediction', methods = ['POST','GET'])
 def prediction():
   if request.method == 'POST':
-    Location = str(request.form['location'])
-    Network_Availability = str(request.form['network_available'])
-    District = str(request.form['district'])
-    Zip_Code = str(request.form['zip_code'])
+    Location = request.form['location']
+    Network_Availability = request.form['network_available']
+    District = request.form['district']
+    Zip_Code = request.form['zip_code']
 
 
     Op = ['GP', 'Robi-Airtel', 'Banglalink', 'Teletalk']

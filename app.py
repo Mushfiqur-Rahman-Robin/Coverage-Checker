@@ -6,7 +6,7 @@ from flask_ngrok import run_with_ngrok
 
 
 #run_with_ngrok(app)
-model = pickle.load(open('/content/catboost_model.pkl', 'rb'))
+model = pickle.load(open('catboost_model.pkl', 'rb'))
 app = Flask(__name__)
 
 
